@@ -13,9 +13,8 @@ class SplashScreenActivity : AppCompatActivity() {
     private val durasi: Long = 2000 // 2 detik
 
     internal val mRunnable: Runnable = Runnable {
-        val intent = Intent(applicationContext, MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
-
         finish()
     }
 
