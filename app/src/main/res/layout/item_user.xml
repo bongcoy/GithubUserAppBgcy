@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    android:background="@color/black_github_light"
+    android:background="@color/grey_fill"
     android:padding="8dp">
 
     <ImageView
@@ -25,6 +25,7 @@
             android:id="@+id/tv_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:text="@string/username" />
 
         <LinearLayout
