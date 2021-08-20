@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_github_dark">#0d1117</color>
+    <color name="black_github_light">#161b22</color>
+    <color name="black_github_light_sec">#34373d</color>
+    <color name="blue_github_text">#58a6ff</color>
+    <color name="green_fill">#238636</color>
+    <color name="green_border">#2ea043</color>
+    <color name="grey_fill">#21262d</color>
+    <color name="grey_border">#30363d</color>
+    <color name="white_prim">#c9d1d9</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
