@@ -25,7 +25,7 @@ class DetailActivity : AppCompatActivity() {
 
         Glide.with(this)
             .load(user.avatar)
-            .apply(RequestOptions.overrideOf(R.dimen.avatar_big))
+            .apply(RequestOptions.overrideOf(R.dimen.avatar_big,R.dimen.avatar_big))
             .into(binding.ivUserProfile)
         binding.apply {
             tvUsername.text = user.username

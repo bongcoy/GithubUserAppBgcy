@@ -10,9 +10,9 @@ import com.example.githubuserappbgcy.list.MainActivity
 
 class SplashScreenActivity : AppCompatActivity() {
     private var mDelayHandler: Handler? = null
-    private val durasi: Long = 2500
+    private val durasi: Long = 2000 // 2 detik
 
-    private val mRunnable: Runnable = Runnable {
+    internal val mRunnable: Runnable = Runnable {
         val intent = Intent(applicationContext, MainActivity::class.java)
         startActivity(intent)
 

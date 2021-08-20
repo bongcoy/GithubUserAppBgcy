@@ -10,8 +10,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/iv_user_profile"
-        android:layout_width="@dimen/avatar_big"
-        android:layout_height="@dimen/avatar_big"
+        android:layout_width="@dimen/avatar_big_layout"
+        android:layout_height="@dimen/avatar_big_layout"
         android:layout_marginBottom="16dp"
         tools:src="@drawable/user1" />
 
