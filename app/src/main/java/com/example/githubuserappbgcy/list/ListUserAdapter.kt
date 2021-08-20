@@ -36,7 +36,6 @@ class ListUserAdapter (private val listUser: ArrayList<User>) : RecyclerView.Ada
         binding.tvFollowerNumber.text = user.followers.toString()
         Glide.with(holder.itemView.context)
             .load(user.avatar)
-            .apply(RequestOptions.overrideOf(R.dimen.avatar_small,R.dimen.avatar_small))
             .into(binding.ivAvatar)
 
         holder.itemView.setOnClickListener{
