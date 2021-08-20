@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dataCompany: Array<String>
     private lateinit var dataLocation: Array<String>
 
+    private val activityTitle : String = "Github User's"
+
     private var users = arrayListOf<User>()
 
     private fun prepareData(){
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setActionBarTitle(activityTitle)
 
         binding.rvUsers.setHasFixedSize(true)
         prepareData()
@@ -86,5 +89,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun showSelectedUser(user: User) {
         Toast.makeText(this, user.username + " clicked !", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setActionBarTitle(title : String) {
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = title
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
