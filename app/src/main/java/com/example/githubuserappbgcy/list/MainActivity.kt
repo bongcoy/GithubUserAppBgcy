@@ -93,12 +93,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setActionBarTitle(title: String) {
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = title
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
-        return true
-    }
 }
