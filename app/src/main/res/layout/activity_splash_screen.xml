@@ -8,10 +8,10 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/logo_github_light" />
+        android:src="@drawable/logo_github_light_120" />
 
     <ImageView
         android:layout_width="160dp"

@@ -11,6 +11,6 @@ data class User(
     val repository: Int,
     val company: String,
     val followers: Int,
-    val following: Int,
+    val followings: Int,
     val avatar: Int
 ) : Parcelable
