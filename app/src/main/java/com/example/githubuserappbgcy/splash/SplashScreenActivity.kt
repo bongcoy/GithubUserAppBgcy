@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.githubuserappbgcy.R
 import com.example.githubuserappbgcy.list.MainActivity
@@ -13,9 +14,8 @@ class SplashScreenActivity : AppCompatActivity() {
     private val durasi: Long = 2000 // 2 detik
 
     internal val mRunnable: Runnable = Runnable {
-        val intent = Intent(applicationContext, MainActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
-
         finish()
     }
 

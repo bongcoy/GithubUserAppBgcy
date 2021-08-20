@@ -3,6 +3,7 @@ package com.example.githubuserappbgcy.list
 import android.content.Intent
 import android.content.res.TypedArray
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -21,11 +22,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dataCompany: Array<String>
     private lateinit var dataLocation: Array<String>
 
-    private val activityTitle : String = "Github User's"
+    private val activityTitle: String = "Github User's"
 
     private var users = arrayListOf<User>()
 
-    private fun prepareData(){
+    private fun prepareData() {
         dataAvatar = resources.obtainTypedArray(R.array.avatar)
         dataUsername = resources.getStringArray(R.array.username)
         dataName = resources.getStringArray(R.array.name)
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addItem() {
-        for (position in dataName.indices){
+        for (position in dataName.indices) {
             val user = User(
                 dataUsername[position],
                 dataName[position],
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                 dataCompany[position],
                 dataFollower[position],
                 dataFollowing[position],
-                dataAvatar.getResourceId(position,-1)
+                dataAvatar.getResourceId(position, -1)
             )
             users.add(user)
         }
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun moveToDetail(user: User) {
         val moveIntent = Intent(this, DetailActivity::class.java)
-        moveIntent.putExtra(DetailActivity.EXTRA_USER,user)
+        moveIntent.putExtra(DetailActivity.EXTRA_USER, user)
         startActivity(moveIntent)
     }
 
@@ -91,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, user.username + " clicked !", Toast.LENGTH_SHORT).show()
     }
 
-    private fun setActionBarTitle(title : String) {
+    private fun setActionBarTitle(title: String) {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = title
     }
