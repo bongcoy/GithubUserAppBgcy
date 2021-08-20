@@ -3,7 +3,6 @@ package com.example.githubuserappbgcy.list
 import android.content.Intent
 import android.content.res.TypedArray
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
