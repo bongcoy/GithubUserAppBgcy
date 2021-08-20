@@ -11,6 +11,15 @@ import com.example.githubuserappbgcy.databinding.ItemUserBinding
 
 class ListUserAdapter (private val listUser: ArrayList<User>) : RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
     private lateinit var binding: ItemUserBinding
+    private lateinit var onItemClickCallback : OnItemClickCallback
+
+    interface OnItemClickCallback {
+        fun onItemClicked(item: User)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     inner class ListViewHolder(binding: ItemUserBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -21,11 +30,18 @@ class ListUserAdapter (private val listUser: ArrayList<User>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val user = listUser[position]
+
+        binding.tvUsername.text = user.username
+        binding.tvRepositoryNumber.text = user.repository.toString()
+        binding.tvFollowerNumber.text = user.followers.toString()
         Glide.with(holder.itemView.context)
             .load(user.avatar)
             .apply(RequestOptions.overrideOf(R.dimen.avatar_small,R.dimen.avatar_small))
-            .into(holder.binding.iv_avatar)
-        binding.tvFollowerNumber.text =
+            .into(binding.ivAvatar)
+
+        holder.itemView.setOnClickListener{
+            onItemClickCallback.onItemClicked(listUser[holder.adapterPosition])
+        }
     }
 
     override fun getItemCount(): Int = listUser.size
