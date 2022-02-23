@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="padding_layout">16dp</dimen>
+    <dimen name="margin_end_column">8dp</dimen>
     <dimen name="avatar_small">72</dimen>
     <dimen name="avatar_small_layout">72dp</dimen>
     <dimen name="avatar_big">154</dimen>

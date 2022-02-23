@@ -87,14 +87,15 @@
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
 
             <ImageView
                 android:id="@+id/iv_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="@dimen/margin_end_column"
                 android:src="@drawable/ic_baseline_business_24" />
 
             <TextView
@@ -114,7 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_marginEnd="4dp"
+                android:layout_marginEnd="@dimen/margin_end_column"
                 android:src="@drawable/ic_baseline_location_on_24" />
 
             <TextView
